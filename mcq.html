@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bn">
+    <head>
+        <title>Typing count</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="script.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div class="container">
+                <section class="heading">
+                    <h1 class="test">📚 Test Exam</h1>
+                    <h2>Type: MCQ</h2>
+                    <h1>Subject: Chemistry</h1>
+                    <button class="start-btn">Let start</button>
+                </section>
+
+                    <div class="main-part">
+                        <div class="explanation">
+                                <div class="details">
+                                    <h3>Question</h>
+                                    <h2>25</h2>
+                                </div>
+                                <div class="details">
+                                    <h3>Time limit</h3>
+                                    <h2>15</h2>
+                                </div>
+                                
+                                <div class="details">
+                                    <h3>Passing score</h3>
+                                    <h2>80%</h2>
+                                </div>
+                                <div class="details">
+                                    <h3>Subject</h3>
+                                    <h2>Chamistry</h2>
+                                </div>
+                        </div>
+                        
+<!-- 
+                        <div class="questionContainer">
+                            <div class="question">
+                            <div class="question-header">Question 1 of 10</div>
+                        </div>
+                        </div> -->
+                        
+                    </div>
+            <div class="timer" id="timer">15:00</div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="question-container" id="questionContainer">
+                <!-- <div class="question active">
+                    <div class="question-header">
+                        <div class="question-number">Question 1 of 10</div>
+                    </div>
+                    <div class="question-text">what is your name?</div>
+                    <div class="options">
+                        <div class
+                    </div>
+                    <div class="navigation">
+                        <button class="btn btn-secondary" onclick="previousQuestion()" 
+                                >
+                            ← Previous
+                        </button>
+                            '<button class="btn btn-primary"  onclick="submitExam()">Submit Exam</button>' :
+                            '<button class="btn btn-primary" onclick="nextQuestion()">Next →</button>'
+                        
+                    </div>
+                </div> -->
+                <!-- Questions will be loaded here -->
+            </div>
+
+            <div class="results" id="results">
+                <h2>🎉 Exam Completed!</h2>
+                <div class="score-circle" id="scoreCircle">
+                    <div class="score-inner">
+                        <div class="score-percentage" id="scorePercentage">0%</div>
+                        <div class="score-text">Score</div>
+                    </div>
+                </div>
+                <div class="score-details">
+                    <div class="score-item">
+                        <h4>Correct Answers</h4>
+                        <p id="correctCount">0</p>
+                    </div>
+                    <div class="score-item">
+                        <h4>Incorrect Answers</h4>
+                        <p id="incorrectCount">0</p>
+                    </div>
+                    <div class="score-item">
+                        <h4>Time Taken</h4>
+                        <p id="timeTaken">0:00</p>
+                    </div>
+                    <div class="score-item">
+                        <h4>Result</h4>
+                        <p id="examResult">-</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="restartExam()">Take Again</button>
+            </div>
+        </div>
+        </div>
+    
+           
+    </body>
+</html>
