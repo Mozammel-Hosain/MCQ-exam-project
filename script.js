@@ -125,14 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
         correct: 1
     },
     {
-        question: "a**2 - 3a + 7 কে a - 1 দ্বারা ভাগ করলে ভাগশেষ নিচের কোনটি হবে?",
+        question: " a2  - 3a + 7 কে a - 1 দ্বারা ভাগ করলে ভাগশেষ নিচের কোনটি হবে?",
         options: ["1", "5", "8", "11"],
         correct: 1
     },
     {
-        question: "P(x) + 5x**3 + 6x**2 - 1x + 6 কে x - 2 দ্বারা ভাগ করলে ভাগশেষ 8 হয়, তবে a এর মান নিচের কোনটি?",
+        question: "P(x) = 5x3 + 6x2 - x + 6   কে x - 2 দ্বারা ভাগ করলে ভাগশেষ 8 হয়, তবে a এর মান নিচের কোনটি?",
         options: ["4", "31", "32", "39"],
-        correct: 2
+        correct: 1
     },
     {
         question: "কোন বহুপদীতে উল্লিখিত পদসমুহের গরিষ্ঠ মাত্রাকে বহুপদীটির কি বলা হয়?",
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         correct: 0
     },
     {
-        question: "দ্বিচলক বহুপদী 8x3 + y3 - 2xy এর মাত্রা কত?",
+        question: "দ্বিচলক বহুপদী 8x3  + y3 - 2xy  এর মাত্রা কত?",
         options: ["8", "3", "2", "1"],
         correctr: 1
     },
@@ -155,14 +155,14 @@ document.addEventListener('DOMContentLoaded', () => {
         correct: 0
     },
     {
-        question: "যদি P(x) + 3x3 - 4x2 + 4x - 3 হয়, তবে P(x) কে (x - 4) দ্বারা ভাগ করলে ভাগশেষ নিচের কোনটি?",
+        question: "যদি P(x) = 3x3 - 4x2 + 4x - 3 হয়, তবে P(x) কে (x - 4) দ্বারা ভাগ করলে ভাগশেষ নিচের কোনটি?",
         options: ["P(1)", "P(2)", "P(3)", "P(4)"],
         correct: 3
     },
     {
         question: "(a - b)3 + (b - c)3 + (c - a)3 কে উৎপাদকে বিশ্লেষণ করলে নিচের কোনটি পাওয়া যাবে?",
         options: ["1", "2", "3(a - b)(b - c)(c - a)", "-3(a - b)(b - c)(c - a)"],
-        correct: 3
+        correct: 2
     },
     {
         question: "P(x) = 3x3 - 2x2 - 7x + 8 হলে, P(-2) এর মান কত?",
