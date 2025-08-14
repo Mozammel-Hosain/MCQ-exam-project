@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function restartExam() {
         currentQuestion = 0;
         userAnswers = [];
-        timeLeft = 900;
+        timeLeft = 1500;
         correctAnswers = 0;
         examStartTime = Date.now();
         
