@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 ];
     // Exam variables
-    let timeLeft = 1500;
+    let timeLeft = 900;
     let userAnswers = []; // Fixed: consistent plural naming
     let timerInterval = null; // Fixed: spelling
     let currentQuestion = 0;
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function restartExam() {
         currentQuestion = 0;
         userAnswers = [];
-        timeLeft = 1500;
+        timeLeft = 900;
         correctAnswers = 0;
         examStartTime = Date.now();
         
