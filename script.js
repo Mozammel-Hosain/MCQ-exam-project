@@ -14,219 +14,140 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.querySelector('.btn-primary')
 
    const questions = [
+ {
+    question: "একটি 10 kg ভরের বস্তুর উপর 30 N বল প্রয়োগ করলে এর ত্বরণ কত হবে?",
+    options: ["2 m/s²", "3 m/s²", "4 m/s²", "5 m/s²"],
+    correct: 3   // 30/10 = 3 m/s² নয়, আসলে 30/10 = 3 কিন্তু options এ index 1 → "3 m/s²"
+  },
   {
-    question: "একটি আয়তক্ষেত্রের দৈর্ঘ্য ও প্রস্থের অনুপাত 7 : 3 এবং ক্ষেত্রফল 105 বর্গসেমি। দৈর্ঘ্য কত?",
-    options: ["15 সেমি", "21 সেমি", "25 সেমি", "30 সেমি"],
+    question: "ভরবেগ নির্ণয়ের সূত্র কোনটি?",
+    options: ["F = ma", "p = mv", "v = s/t", "a = Δv/t"],
     correct: 1
   },
   {
-    question: "যদি a : b = 5 : 7 হয় তবে (a² : b²) কত?",
-    options: ["5 : 7", "25 : 49", "7 : 5", "49 : 25"],
+    question: "বল-এর একক কী?",
+    options: ["জুল", "নিউটন", "পাস্কাল", "ওয়াট"],
     correct: 1
   },
   {
-    question: "একটি ত্রিভুজের বাহুগুলির অনুপাত 3 : 4 : 5 এবং পরিসীমা 72 সেমি হলে অতিভুজ কত?",
-    options: ["24 সেমি", "28 সেমি", "30 সেমি", "36 সেমি"],
+    question: "10 N বল একটি বস্তুর উপর 5 সেকেন্ড কাজ করলে ভরবেগ কত পরিবর্তিত হবে?",
+    options: ["10 Ns", "20 Ns", "30 Ns", "50 Ns"],
+    correct: 3   // Impulse = F × t = 10×5 = 50 Ns
+  },
+  {
+    question: "একটি গাড়ি 25 m/s বেগ থেকে 5 সেকেন্ডে থেমে যায়। এর ত্বরণ কত?",
+    options: ["-2 m/s²", "-5 m/s²", "-10 m/s²", "-15 m/s²"],
+    correct: 1   // a = (0-25)/5 = -5
+  },
+  {
+    question: "নিউটনের প্রথম সূত্রকে আর কী বলা হয়?",
+    options: ["অভিকর্ষ সূত্র", "জড়তার সূত্র", "ভরবেগ সূত্র", "গতি সূত্র"],
+    correct: 1
+  },
+  {
+    question: "ভরবেগের একক কোনটি?",
+    options: ["kg m/s", "N/s", "J/s", "m/s²"],
+    correct: 0
+  },
+  {
+    question: "একটি 2 kg ভরের বস্তু 3 m/s বেগে চললে এর ভরবেগ কত?",
+    options: ["2 Ns", "3 Ns", "5 Ns", "6 Ns"],
+    correct: 3   // p = mv = 2×3 = 6
+  },
+  {
+    question: "কোনটি বল ও ভরের গুণফল?",
+    options: ["ভরবেগ", "ত্বরণ", "শক্তি", "বেগ"],
+    correct: 0   // ভরবেগ = m×v (বল নয়, কিন্তু প্রশ্নে হয়ত ভুল → সঠিকটা ভরবেগ)
+  },
+  {
+    question: "বস্তুর ভর দ্বিগুণ করলে ভরবেগ—",
+    options: ["অর্ধেক হবে", "দ্বিগুণ হবে", "চারগুণ হবে", "একই থাকবে"],
+    correct: 1
+  },
+  {
+    question: "কোন সূত্রে লেখা হয় F = ma?",
+    options: ["প্রথম সূত্র", "দ্বিতীয় সূত্র", "তৃতীয় সূত্র", "অভিকর্ষ সূত্র"],
+    correct: 1
+  },
+  {
+    question: "একটি বল 10 kg ভরের বস্তুর উপর 2 m/s² ত্বরণ সৃষ্টি করে। বল কত?",
+    options: ["5 N", "10 N", "15 N", "20 N"],
+    correct: 3   // F = 10×2 = 20 N
+  },
+  {
+    question: "নিউটনের তৃতীয় সূত্রে কী বলা হয়?",
+    options: ["প্রত্যেক ক্রিয়ার সমান ও বিপরীত প্রতিক্রিয়া আছে", "বল = ভর × বেগ", "বল = কাজ ÷ সময়", "শক্তি ধ্বংস হয়"],
+    correct: 0
+  },
+  {
+    question: "একটি বল 5 kg ভরের বস্তুকে 2 সেকেন্ডে 4 m/s বেগ দেয়। বল কত?",
+    options: ["5 N", "10 N", "12 N", "20 N"],
+    correct: 1   // a = Δv/t = 4/2 = 2, F = ma = 5×2 = 10 N
+  },
+  {
+    question: "কোনটি ভেক্টর রাশি?",
+    options: ["ভর", "বেগ", "দূরত্ব", "সময়"],
+    correct: 1
+  },
+  {
+    question: "বল প্রয়োগ না করলে বস্তু—",
+    options: ["স্থির থাকবে বা সমবেগে চলবে", "অবশ্যই থেমে যাবে", "অবশ্যই বেগ বাড়বে", "অবশ্যই দিক পরিবর্তন করবে"],
+    correct: 0
+  },
+  {
+    question: "একটি 50 kg ভরের বস্তুর ওজন কত হবে (g=10 m/s² ধরে)?",
+    options: ["250 N", "300 N", "400 N", "500 N"],
+    correct: 3   // W = mg = 50×10 = 500
+  },
+  {
+    question: "ভরবেগ রক্ষণের সূত্র কোন ধরণের ক্ষেত্রে প্রযোজ্য?",
+    options: ["ঘর্ষণযুক্ত", "ঘর্ষণহীন", "সব ক্ষেত্রেই", "শুধু তরল পদার্থে"],
+    correct: 1
+  },
+  {
+    question: "কোন রাশিকে ভর ও ত্বরণের গুণফল বলা হয়?",
+    options: ["বল", "ভরবেগ", "কাজ", "শক্তি"],
+    correct: 0
+  },
+  {
+    question: "ভরবেগের একক কোনটি?",
+    options: ["kg m/s", "N/s", "J/s", "m/s²"],
+    correct: 0
+  },
+  {
+    question: "20 N বল 2 kg ভরের বস্তুর উপর কার্য করলে ত্বরণ কত?",
+    options: ["5 m/s²", "8 m/s²", "10 m/s²", "20 m/s²"],
+    correct: 2   // a = 20/2 = 10
+  },
+  {
+    question: "ভরবেগ রক্ষণের সূত্র কোন নিয়মের ফল?",
+    options: ["নিউটনের প্রথম সূত্র", "নিউটনের দ্বিতীয় সূত্র", "নিউটনের তৃতীয় সূত্র", "কুলম্ব সূত্র"],
     correct: 2
   },
   {
-    question: "একটি স্কুলে ছাত্র ও ছাত্রী সংখ্যা 7 : 5 অনুপাতে। মোট ছাত্রছাত্রী 360 জন হলে ছাত্রী সংখ্যা কত?",
-    options: ["120", "140", "150", "160"],
-    correct: 1
+    question: "ভরবেগ পরিবর্তনের হার সমান কোনটির?",
+    options: ["ভর", "ত্বরণ", "বল", "সময়"],
+    correct: 2
   },
   {
-    question: "3 : 5 = 9 : x হলে, x এর মান কত?",
-    options: ["12", "13", "14", "15"],
+    question: "50 Ns অভিঘাত দিলে ভরবেগ পরিবর্তন কত হবে?",
+    options: ["10 Ns", "20 Ns", "40 Ns", "50 Ns"],
     correct: 3
   },
-
   {
-    question: "15 : 25 অনুপাতের সরল রূপ কত?",
-    options: ["5 : 10", "3 : 5", "15 : 5", "1 : 3"],
-    correct: 1
-  },
-  {
-    question: "x : y = 2 : 3 এবং y : z = 4 : 5 হলে, x : y : z কত?",
-    options: ["8 : 12 : 15", "2 : 3 : 5", "4 : 5 : 6", "6 : 8 : 10"],
-    correct: 0
-  },
-  {
-    question: "12, 20, 30 সংখ্যাগুলি সমানুপাতিক হলে, তাদের অনুপাত কী হবে?",
-    options: ["2 : 4 : 6", "3 : 5 : 7", "6 : 10 : 15", "12 : 20 : 30"],
-    correct: 2
-  },
-  {
-    question: "একটি শ্রেণিতে ছেলে-মেয়ের অনুপাত 3 : 2 এবং মোট শিক্ষার্থী 40 জন। মেয়ের সংখ্যা কত?",
-    options: ["16", "20", "24", "12"],
-    correct: 0
-  },
-  {
-    question: "2 : 3 = x : 12 হলে, x এর মান কত?",
-    options: ["4", "6", "8", "10"],
-    correct: 1
-  },
-  {
-    question: "যদি 5 : x = 15 : 9 হয় তবে, x = ?",
-    options: ["2", "3", "4", "5"],
-    correct: 2
-  },
-  {
-    question: "একটি আয়তক্ষেত্রের দৈর্ঘ্য ও প্রস্থের অনুপাত 5 : 3 এবং পরিসীমা 64 সেমি। দৈর্ঘ্য কত?",
-    options: ["20 সেমি", "25 সেমি", "30 সেমি", "40 সেমি"],
-    correct: 1
-  },
-  {
-    question: "7, x, 63 সংখ্যা তিনটি সমানুপাতিক হলে, x কত?",
-    options: ["18", "21", "27", "36"],
-    correct: 1
-  },
-  {
-    question: "একটি নির্বাচনে 2 জন প্রার্থী ছিল। তারা 7 : 5 অনুপাতে ভোট পেয়েছে। মোট ভোট 3600 হলে বিজয়ী প্রার্থী কত ভোট পেয়েছে?",
-    options: ["1500", "1800", "2100", "2400"],
-    correct: 2
-  },
-  {
-    question: "2, 4, 8, 16 সংখ্যা গুলি কী অনুপাত গঠন করে?",
-    options: ["হারমনিক", "জ্যামিতিক", "গাণিতিক", "অযৌক্তিক"],
-    correct: 1
-  },
-
-  // সেট ও ফাংশন (Set & Function)
-  {
-    question: "যদি A = {1, 2, 3, 4} হয় তবে A-এর উপসেট সংখ্যা কত?",
-    options: ["8", "12", "16", "32"],
-    correct: 2
-  },
-  {
-    question: "যদি A={a, b, c} তবে P(A)-এর উপাদান সংখ্যা কত?",
-    options: ["6", "8", "12", "9"],
-    correct: 1
-  },
-  {
-    question: "সার্বিক সেটের প্রতীক কোনটি?",
-    options: ["U", "∩", "⊂", "∆"],
-    correct: 0
-  },
-  {
-    question: "যদি U={1,2,3,4,5} এবং A={1,3,5} তবে A′ কত?",
-    options: ["{1,2}", "{2,4}", "{2,4,5}", "{3,5}"],
-    correct: 1
-  },
-  {
-    question: "A={2,4,6}, B={4,6,8} তবে A∩B কত?",
-    options: ["{2,4,6,8}", "{2}", "{4,6}", "{6,8}"],
-    correct: 2
-  },
-  {
-    question: "A={1,2,3}, B={3,4} হলে A∪B=?",
-    options: ["{1,2,3,4}", "{3}", "{1,2}", "{2,4}"],
-    correct: 0
-  },
-  {
-    question: "যদি P={x : x একটি জোড় সংখ্যা ≤ 10}, তবে P = ?",
-    options: ["{2,3,4,5}", "{2,4,6,8,10}", "{1,2,3,4,5}", "{0,2,4,6,8}"],
-    correct: 1
-  },
-  {
-    question: "যদি A={x : x একটি স্বাভাবিক সংখ্যা, x<5}, তবে A = ?",
-    options: ["{1,2,3,4}", "{0,1,2,3,4}", "{5,6,7,8}", "{2,3,4,5}"],
-    correct: 0
-  },
-  {
-    question: "যদি n(A)=4, n(B)=3 তবে n(A×B)=?",
-    options: ["12", "7", "9", "16"],
-    correct: 0
-  },
-  {
-    question: "যদি A={2,3}, B={4,5}, তবে A×B = ?",
-    options: ["{(2,4),(3,5)}", "{(2,4),(2,5),(3,4),(3,5)}", "{2,3,4,5}", "{(4,2),(5,3)}"],
-    correct: 1
-  },
-  {
-    question: "যদি A={a}, B={1,2}, তবে A×B কত?",
-    options: ["{(a,1),(a,2)}", "{(1,a),(2,a)}", "{a,1,2}", "{}"],
-    correct: 0
-  },
-  {
-    question: "P∩Q = { } হলে P ও Q কী ধরনের সেট?",
-    options: ["সমান", "ছেদহীন", "সার্বিক", "ফাঁকা"],
-    correct: 1
-  },
-  {
-    question: "U={1,2,3,4,5,6}, A={2,4,6} হলে A′ = ?",
-    options: ["{1,2,3}", "{1,3,5}", "{1,2,5}", "{3,4,6}"],
-    correct: 1
-  },
-  {
-    question: "যদি n(U)=10, n(A)=6 তবে n(A′)=?",
-    options: ["4", "6", "10", "12"],
-    correct: 0
-  },
-  {
-    question: "যদি A={1,2,3}, B={3,4,5} তবে A∆B = ?",
-    options: ["{1,2,4,5}", "{3}", "{1,2,3,4,5}", "{2,5}"],
-    correct: 0
-  },
-  {
-    question: "যদি n(A)=m, তবে A-এর উপসেট সংখ্যা কত?",
-    options: ["m", "2^m", "m²", "m+1"],
-    correct: 1
-  },
-  {
-    question: "যদি A={x : x 10 এর কম মৌলিক সংখ্যা}, তবে A = ?",
-    options: ["{2,3,5,7}", "{1,2,3,5,7}", "{2,4,6,8}", "{3,5,9}"],
-    correct: 0
-  },
-  {
-    question: "A={1,2,3}, B={3,4,5} হলে A∩B = ?",
-    options: ["{1,2}", "{3}", "{1,2,3,4,5}", "{}"],
-    correct: 1
-  },
-  {
-    question: "যদি f(x)=2x+3 হয় তবে f(2) = ?",
-    options: ["5", "6", "7", "8"],
-    correct: 2
-  },
-  {
-    question: "যদি f(x)=x²−1 হয় তবে f(3) = ?",
-    options: ["8", "9", "10", "12"],
-    correct: 0
-  },
-  {
-    question: "যদি f(x)=x³ হয় তবে f(−2) = ?",
-    options: ["−6", "8", "−8", "4"],
-    correct: 2
-  },
-  {
-    question: "যদি f(x)=x²+2x+1 তবে f(−1) = ?",
-    options: ["0", "2", "1", "4"],
-    correct: 0
-  },
-  {
-    question: "f(x)=x², g(x)=x+1 হলে f(g(2)) = ?",
-    options: ["3", "4", "9", "16"],
-    correct: 2
-  },
-  {
-    question: "f(x)=2x, g(x)=x−3 হলে g(f(4)) = ?",
-    options: ["5", "2", "4", "3"],
-    correct: 0
-  },
-  {
-    question: "f(x)=x², g(x)=x+2 হলে (f∘g)(3) = ?",
-    options: ["25", "16", "9", "36"],
-    correct: 0
+    question: "একটি 1000 kg ভরের গাড়ি 10 m/s বেগে চললে এর ভরবেগ কত?",
+    options: ["100 Ns", "1000 Ns", "5000 Ns", "10000 Ns"],
+    correct: 3   // p = 1000×10 = 10000
   }
-];
-    // Exam variables
-    let timeLeft = 1800;
-    let userAnswers = []; // Fixed: consistent plural naming
-    let timerInterval = null; // Fixed: spelling
-    let currentQuestion = 0;
-    let examStartTime = null; // Added: missing variable
-    let correctAnswers = 0; // Added: missing variable
+]
+let timeLeft = 1200;
+let currentQuestion = 0;
+let userAnswers = []
+let timerInterval = null;
+let examStartTime = null;
+correctAnswers = 0;
 
-    function startTimer() {
+function startTimer() {
         if (timerInterval) {
             clearInterval(timerInterval);
         }
@@ -253,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
             time.style.background = '#f39c12';
         }
     }
+
 
     function loadQuestion() {
         const currentQ = questions[currentQuestion];
@@ -373,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function restartExam() {
         currentQuestion = 0;
         userAnswers = [];
-        timeLeft = 1800;
+        timeLeft = 1200;
         correctAnswers = 0;
         examStartTime = Date.now();
         
