@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ]
     
-    let timeLeft = 1200;
+    let timeLeft = 600;
     let currentQuestion = 0;
     let userAnswers = []
     let timerInterval = null;
