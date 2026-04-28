@@ -345,3 +345,12 @@ div#scoreCircle {
         gap:15px;
     }
 }
+
+.answer{
+    padding: 30px;
+    
+}
+
+#useGap {
+    margin-left: 20px;
+}
