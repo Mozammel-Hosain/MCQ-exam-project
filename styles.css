@@ -354,3 +354,11 @@ div#scoreCircle {
 #useGap {
     margin-left: 20px;
 }
+
+.finish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    
+}

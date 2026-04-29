@@ -858,7 +858,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function home(){
-            answer.innerHTML = 'All task completed.';
+
+           answer.innerHTML = 'All task completed'
             
             
              
